@@ -1,0 +1,151 @@
+body {
+  background-color: #002c59; /* Fondo blanco */
+  color: #002c59; /* Color de texto principal */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  font-size: 18px; /* Tamaño de letra principal */
+  line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+}
+.titulo {
+  background-color: #fff;
+  color: #002c59;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  font-size: 2.5em;
+  border-radius: 8px;
+}
+.titulo::before {
+  content: "\1F43E"; /* Emoji de huella de pata (puedes cambiarlo por otro) */
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+.titulo span {
+  font-weight: bold;
+  font-style: italic;
+}
+.titulo a {
+    color: #002c59;
+}
+section {
+  border-radius: 15px;
+  margin: 50px auto; /* Centrar la sección */
+  max-width: 800px; /* Ancho máximo para la sección */
+  padding: 20px;
+  position: relative;
+  box-shadow: 4px 4px 35px rgba(255, 255, 255, 0.4); /* Sombra sutil para resaltar */
+  text-shadow: 1px 1px 0px #000000;
+}
+
+h1,
+h2 {
+  color: #fff;
+  font-size: 2em; /* Tamaño de letra más grande para títulos principales */
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffcc00;
+}
+
+/* Fondo con imagen para la primera sección */
+.bg1 {
+  background-image: url("../portada.jpg"); /* Reemplaza 'imagen1.jpg' con la ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Cambia el color de texto para que sea legible en la imagen */
+}
+.bg2 {
+  background-image: url("../bosque.jpg"); /* Reemplaza 'imagen1.jpg' con la ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Cambia el color de texto para que sea legible en la imagen */
+}
+.bg3 {
+  background-image: url("../naranja.jpg"); /* Reemplaza 'imagen1.jpg' con la ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Cambia el color de texto para que sea legible en la imagen */
+}
+.separar {
+  background-color: #fff;
+  height: 50px;
+}
+.footer {
+  background-color: var(--color-primario); /* Color de fondo */
+  color: white; /* Color de texto */
+  padding: 20px 0 0; /* Espaciado interno */
+  /* margin-top: 40px; */
+  position: relative;
+  z-index: 999;
+}
+
+/* Estilos para los enlaces dentro del footer */
+.footer a {
+  color: white; /* Color de enlaces */
+  text-decoration: none; /* Quitar subrayado */
+}
+/* Estilos para el contenido del footer */
+.footer-content {
+  display: flex; /* Display en línea */
+  justify-content: space-between; /* Distribución espaciada entre elementos */
+}
+.container {
+  margin-top: 20px;
+}
+/* Estilos para la sección de contactos y enlaces */
+.footer-contact,
+.footer-links {
+  flex: 1; /* Distribución proporcional */
+}
+/* Estilos para el fondo del footer */
+.footer-bottom {
+  background-color: #1a2640; /* Color de fondo para el fondo del footer */
+  text-align: center; /* Alineación centrada */
+  padding: 10px 0; /* Espaciado interno */
+}
+.footer-links {
+  margin-left: 20px;
+}
+/* Estilos para los enlaces en el footer */
+.footer-links ul {
+  list-style-type: none; /* Quitar viñetas */
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px; /* Espaciado entre elementos */
+}
+.footer-links a:hover {
+  color: #ffcc00;
+}
+.footer-social {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+/* Estilos para la sección de redes sociales */
+.footer-social ul {
+  list-style-type: none; /* Quitar viñetas */
+  padding: 0; /* Quitar espaciado */
+  display: flex; /* Display en línea */
+  justify-content: center; /* Alineación centrada */
+  margin: 10px 0;
+}
+
+.footer-social li {
+  margin: 0 10px; /* Espaciado entre elementos */
+}
+.footer-social a:hover {
+  color: #ffcc00;
+}

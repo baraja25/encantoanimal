@@ -1,0 +1,159 @@
+:root {
+  --color-primario: #002c59;
+  --color-secundario: #f5f5f5;
+}
+body {
+  font-family: "Roboto Slab", serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+}
+
+header {
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+}
+
+form {
+  background-color: var(--color-secundario);
+  border: 1px solid var(--color-primario);
+  padding: 20px;
+  border-radius: 10px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid var(--color-primario);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  cursor: pointer;
+}
+
+a {
+  color: var(--color-primario);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: var(--color-primario); /* Color de fondo */
+  color: white; /* Color de texto */
+  padding: 20px 0 0; /* Espaciado interno */
+  /* margin-top: 40px; */
+  position: relative;
+  z-index: 999;
+}
+
+/* Estilos para los enlaces dentro del footer */
+.footer a {
+  color: white; /* Color de enlaces */
+  text-decoration: none; /* Quitar subrayado */
+}
+
+/* Estilos para el contenido del footer */
+.footer-content {
+  display: flex; /* Display en línea */
+  justify-content: space-between; /* Distribución espaciada entre elementos */
+}
+.container {
+  margin-top: 20px;
+}
+/* Estilos para la sección de contactos y enlaces */
+.footer-contact,
+.footer-links {
+  flex: 1; /* Distribución proporcional */
+}
+
+/* Estilos para el fondo del footer */
+.footer-bottom {
+  background-color: #1a2640; /* Color de fondo para el fondo del footer */
+  text-align: center; /* Alineación centrada */
+  padding: 10px 0; /* Espaciado interno */
+}
+.footer-links {
+  margin-left: 20px;
+}
+/* Estilos para los enlaces en el footer */
+.footer-links ul {
+  list-style-type: none; /* Quitar viñetas */
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px; /* Espaciado entre elementos */
+}
+.footer-links a:hover {
+  color: #ffcc00;
+}
+.footer-social {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+/* Estilos para la sección de redes sociales */
+.footer-social ul {
+  list-style-type: none; /* Quitar viñetas */
+  padding: 0; /* Quitar espaciado */
+  display: flex; /* Display en línea */
+  justify-content: center; /* Alineación centrada */
+  margin: 10px 0;
+}
+
+.footer-social li {
+  margin: 0 10px; /* Espaciado entre elementos */
+}
+.footer-social a:hover {
+  color: #ffcc00;
+}
+/*Estilos para el boton volver*/
+.volver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--color-primario);
+  border-radius: 8px;
+  height: 30px;
+  width: 200px;
+}
+.volver a {
+  color: var(--color-secundario);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.volver a:hover {
+  color: #ffcc00;
+}

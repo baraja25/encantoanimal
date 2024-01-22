@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="recursos/css/reset.css" />
+    <link rel="stylesheet" href="recursos/css/formulario.css" />
+    <!-- import font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto+Slab:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favico -->
+    <link rel="shortcut icon" href="ico/favicon.ico" type="image/x-icon">
+    <title>Formulario de Sesion</title>
+  </head>
+  <body>
+    <!-- Título -->
+    <header>
+      <h1>Subir Foto de Mascota</h1>
+    </header>
+
+    <!-- Formulario -->
+    <main>
+      <form method="post" enctype="multipart/form-data">
+        <table>
+          <tr>
+            <td>
+              <label for="nombre">Nombre de la Mascota:</label>
+            </td>
+            <td>
+              <input type="text" id="nombre" name="nombre" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="foto">Subir Foto:</label>
+            </td>
+            <td>
+              <input
+                type="file"
+                id="foto"
+                name="foto"
+                accept="image/*"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="tipo_mascota">Tipo de mascota:</label>
+            </td>
+            <td>
+              <select id="tipo_mascota" name="tipo_mascota" required>
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="otro">Otro</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="comentarios">Comentarios:</label>
+            </td>
+            <td>
+              <textarea
+                id="comentarios"
+                name="comentarios"
+                rows="4"
+                cols="50"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Enviar" />
+            </td>
+          </tr>
+        </table>
+      </form>
+
+      <!-- Volver al índice -->
+      <div class="volver">
+        <p><a href="index.html">Volver a Encanto Animal</a></p>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-links">
+            <ul>
+              <li><a href="cuidados.html">Consejos de cuidado</a></li>
+              <li><a href="formulario.html">Subir Foto de Mascota</a></li>
+              <li><a href="politica.html">Política de Privacidad</a></li>
+              <li><a href="terminos.html">Términos y Condiciones</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <p>Contáctanos:</p>
+            <p>
+              Dirección: Calle de las Mascotas, 123, Ciudad Encantada, PA 56789,
+              España
+            </p>
+            <p>Email: info@encantoanimal.com</p>
+            <p>Teléfono: +1 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="footer-social">
+          <h3>Síguenos en:</h3>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            </li>
+            <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Encanto Animal. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>
