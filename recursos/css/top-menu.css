@@ -1,34 +1,54 @@
 /* Estilos para la barra de navegación en la parte superior */
-.top-menu {
+bento-sidebar[open] {
     background-color: var(--color-primario);
-    padding: 10px;
-    position: sticky;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    transition: background-color 0.3s ease; /* Añadida transición para el cambio de color al hacer scroll */
+    color: #f5f5f5;
+    width: 250px;
+    padding-left: 10px;
   }
   
-  .top-menu ul {
+  bento-sidebar[open] ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
   }
   
-  .top-menu li {
-    display: inline;
+  bento-sidebar[open] li {
+    display: block;
     margin-right: 20px;
+    margin-bottom: 20px;
   }
   
-  .top-menu a {
+  bento-sidebar[open] a {
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 16px;
   }
-  
+  #sidebar1 h2 {
+    margin-top: 25px;
+    margin-bottom: 40px;
+    margin-right: 60px;
+    font-size: 30px;
+    font-weight: 900;
+  }
   /* Cambia el color del texto del menú al pasar el ratón */
-  .top-menu a:hover {
+  bento-sidebar[open] a:hover {
     color: #ffcc00;
+  }
+  /*svg*/
+  #open-sidebar {
+    z-index: 1000;
+    position: fixed;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  #close-sidebar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
   }
