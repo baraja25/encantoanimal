@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bento import -->
+    <script type="module" src="https://cdn.ampproject.org/bento.mjs" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.ampproject.org/bento.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://cdn.ampproject.org/v0/bento-sidebar-1.0.mjs" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.ampproject.org/v0/bento-sidebar-1.0.js" crossorigin="anonymous"></script>
+    <!-- fuente import -->
+    <link rel="stylesheet" href="https://cdn.ampproject.org/v0/bento-sidebar-1.0.css" crossorigin="anonymous"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="recursos/css/lightbox.css">
+    <link rel="stylesheet" href="recursos/css/galeria.css">
+    <link rel="stylesheet" href="recursos/css/top-menu.css">
+    <title>Galeria</title>
+  </head>
+  <body>
+    <button id="open-sidebar">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="48px"
+          viewBox="0 0 24 24"
+          width="48px"
+          fill="#000000"
+        >
+          <path d="M0 0h24v24H0V0z" fill="none" />
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+        </svg>
+      </button>
+      <bento-sidebar id="sidebar1" side="left" hidden>
+        <button id="close-sidebar">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="53.7"
+            height="53.7"
+            viewBox="0 0 53.7 53.7"
+            stroke="#ffffff"
+          >
+            <path
+              opacity="1"
+              fill="#ffffff"
+              d="M35.6 34.4L28 26.8l7.6-7.6c.2-.2.2-.5
+                    0-.7l-.5-.5c-.2-.2-.5-.2-.7 0l-7.6
+                    7.6-7.5-7.6c-.2-.2-.5-.2-.7 0l-.6.6c-.2.2-.2.5 0
+                    .7l7.6 7.6-7.6 7.5c-.2.2-.2.5 0 .7l.5.5c.2.2.5.2.7
+                    0l7.6-7.6 7.6 7.6c.2.2.5.2.7 0l.5-.5c.2-.2.2-.5 0-.7z"
+            />
+          </svg>
+        </button>
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="cuidados.html">Consejos de cuidado</a></li>
+          <li><a href="formulario.html">Subir Foto de Mascota</a></li>
+        </ul>
+      </bento-sidebar>
+      <script>
+        (async () => {
+          const sidebar = document.querySelector('#sidebar1');
+          await customElements.whenDefined('bento-sidebar');
+          const api = await sidebar.getApi();
+          // set up button actions
+          document.querySelector('#open-sidebar').onclick = () => api.open();
+          document.querySelector('#close-sidebar').onclick = () => api.close();
+        })();
+      </script>
+    <div class="container">
+        
+        <div class="subcontainer">
+            
+            <div class="grid">
+                <a href="recursos/husky1.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/husky2.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/cachorro.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/cachorros.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/labrador1.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/labrador2.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/gatodormir.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/maine2.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/Maine1.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/hug.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/naranja.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/pitbull.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/siames1.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/siames2.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/montaña.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/floki.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/floki2.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+                <a href="recursos/persona.jpg" data-tittle="Mascota" data-lightbox="mascota-img" class="img"></a>
+            </div>
+        </div>
+    </div>
+    <script src="recursos/js/lightbox-plus-jquery.js"></script>
+  </body>
+</html>

@@ -53,9 +53,8 @@ h1 {
     url("../portada.jpg");
   background-size: cover;
 }
-.bg2::after {
-  background: linear-gradient(rgba(137, 171, 227, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../floki2.jpg");
+.bg2 {
+  background:url("../floki2.jpg");
   background-size: cover;
 }
 .bg3::after {
