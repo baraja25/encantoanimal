@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="recursos/css/reset.css" />
-    <link rel="stylesheet" href="recursos/css/formulario.css" />
+
+     <!--bento import-->
+     <script type="module" src="https://cdn.ampproject.org/bento.mjs" crossorigin="anonymous"></script>
+     <script nomodule src="https://cdn.ampproject.org/bento.js" crossorigin="anonymous"></script>
+     <script type="module" src="https://cdn.ampproject.org/v0/bento-sidebar-1.0.mjs" crossorigin="anonymous"></script>
+     <script nomodule src="https://cdn.ampproject.org/v0/bento-sidebar-1.0.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://cdn.ampproject.org/v0/bento-sidebar-1.0.css" crossorigin="anonymous"></link>
     <!-- import font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,79 +23,130 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <!-- css -->
+    <link rel="stylesheet" href="recursos/css/top-menu.css">
+    <link rel="stylesheet" href="recursos/css/reset.css" />
+    <link rel="stylesheet" href="recursos/css/formulario.css" />
     <!-- favico -->
     <link rel="shortcut icon" href="ico/favicon.ico" type="image/x-icon">
     <title>Formulario de Sesion</title>
   </head>
   <body>
-    <!-- Título -->
-    <header>
-      <h1>Subir Foto de Mascota</h1>
-    </header>
-
+    <button id="open-sidebar">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="48px"
+        viewBox="0 0 24 24"
+        width="48px"
+        fill="#000000"
+      >
+        <path d="M0 0h24v24H0V0z" fill="none" />
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+      </svg>
+    </button>
+    <bento-sidebar id="sidebar1" side="left" hidden>
+      <button id="close-sidebar">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="53.7"
+          height="53.7"
+          viewBox="0 0 53.7 53.7"
+          stroke="#ffffff"
+        >
+          <path
+            opacity="1"
+            fill="#ffffff"
+            d="M35.6 34.4L28 26.8l7.6-7.6c.2-.2.2-.5
+                  0-.7l-.5-.5c-.2-.2-.5-.2-.7 0l-7.6
+                  7.6-7.5-7.6c-.2-.2-.5-.2-.7 0l-.6.6c-.2.2-.2.5 0
+                  .7l7.6 7.6-7.6 7.5c-.2.2-.2.5 0 .7l.5.5c.2.2.5.2.7
+                  0l7.6-7.6 7.6 7.6c.2.2.5.2.7 0l.5-.5c.2-.2.2-.5 0-.7z"
+          />
+        </svg>
+      </button>
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="cuidados.html">Consejos de cuidado</a></li>
+      </ul>
+    </bento-sidebar>
+    <script>
+      (async () => {
+        const sidebar = document.querySelector('#sidebar1');
+        await customElements.whenDefined('bento-sidebar');
+        const api = await sidebar.getApi();
+        // set up button actions
+        document.querySelector('#open-sidebar').onclick = () => api.open();
+        document.querySelector('#close-sidebar').onclick = () => api.close();
+      })();
+    </script>
     <!-- Formulario -->
     <main>
+
       <form method="post" enctype="multipart/form-data">
+        <h2>CONTACTO</h2>
+        <p>¡ESTARÉ ENCANTADO DE CONOCERTE!</p>
         <table>
           <tr>
             <td>
-              <label for="nombre">Nombre de la Mascota:</label>
+              <label for="nombre">Nombre:</label>
             </td>
             <td>
-              <input type="text" id="nombre" name="nombre" required />
+              <input type=" id="nombre" name="nombre" required />
+            </td>
+            <td>
+              <label for="apellidos">Apellidos:</label>
+            </td>
+            <td>
+              <input type="text" id="apellidos" name="apellidos" required />
             </td>
           </tr>
           <tr>
             <td>
-              <label for="foto">Subir Foto:</label>
+              <label for="email">Email:</label>
             </td>
             <td>
-              <input
-                type="file"
-                id="foto"
-                name="foto"
-                accept="image/*"
-                required
-              />
+              <input type="email" id="email" name="email" required />
+            </td>
+            <td>
+              <label for="telefono">Teléfono:</label>
+            </td>
+            <td>
+              <input type="tel" id="telefono" name="telefono" required />
             </td>
           </tr>
           <tr>
             <td>
-              <label for="tipo_mascota">Tipo de mascota:</label>
+              <label for="provincia">Provincia:</label>
             </td>
             <td>
-              <select id="tipo_mascota" name="tipo_mascota" required>
-                <option value="perro">Perro</option>
-                <option value="gato">Gato</option>
-                <option value="otro">Otro</option>
-              </select>
+              <input type="text" id="provincia" name="provincia" />
+            </td>
+            <td>
+              <label for="ciudad">Ciudad:</label>
+            </td>
+            <td>
+              <input type="text" id="ciudad" name="ciudad" required />
             </td>
           </tr>
           <tr>
-            <td>
-              <label for="comentarios">Comentarios:</label>
-            </td>
-            <td>
-              <textarea
-                id="comentarios"
-                name="comentarios"
-                rows="4"
-                cols="50"
-              ></textarea>
+            <td colspan="4">
+              <label for="mensaje">Mensaje del usuario:</label>
             </td>
           </tr>
           <tr>
-            <td colspan="2">
+            <td colspan="4">
+              <textarea id="mensaje" name="mensaje" rows="4" cols="50"  style="resize: none;"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4">
               <input type="submit" value="Enviar" />
             </td>
           </tr>
         </table>
       </form>
-
-      <!-- Volver al índice -->
-      <div class="volver">
-        <p><a href="index.html">Volver a Encanto Animal</a></p>
-      </div>
     </main>
     <!-- footer -->
     <footer id="footer" class="footer">

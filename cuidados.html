@@ -3,17 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
     <link rel="stylesheet" href="recursos/css/reset.css" />
     <link rel="stylesheet" href="recursos/css/cuidados.css" />
+    <link rel="stylesheet" href="recursos/css/footer.css">
+    <link rel="stylesheet" href="recursos/css/top-menu.css">
+    <!--bento import-->
+    <script type="module" src="https://cdn.ampproject.org/bento.mjs" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.ampproject.org/bento.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://cdn.ampproject.org/v0/bento-sidebar-1.0.mjs" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.ampproject.org/v0/bento-sidebar-1.0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.ampproject.org/v0/bento-sidebar-1.0.css" crossorigin="anonymous"></link>
+    <!-- fuente importada de google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto+Slab:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
     <!-- favico -->
     <link rel="shortcut icon" href="ico/favicon.ico" type="image/x-icon">
     
     <title>Consejos de Cuidado</title>
   </head>
   <body>
-    <!-- Título -->
-    <h1 class="titulo"><span><a href="index.html">Encanto Animal</a></span> - Consejos de Cuidado</h1>
-
+    <button id="open-sidebar">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="48px"
+        viewBox="0 0 24 24"
+        width="48px"
+        fill="#000000"
+      >
+        <path d="M0 0h24v24H0V0z" fill="none" />
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+      </svg>
+    </button>
+    <bento-sidebar id="sidebar1" side="left" hidden>
+      <button id="close-sidebar">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="53.7"
+          height="53.7"
+          viewBox="0 0 53.7 53.7"
+          stroke="#ffffff"
+        >
+          <path
+            opacity="1"
+            fill="#ffffff"
+            d="M35.6 34.4L28 26.8l7.6-7.6c.2-.2.2-.5
+                  0-.7l-.5-.5c-.2-.2-.5-.2-.7 0l-7.6
+                  7.6-7.5-7.6c-.2-.2-.5-.2-.7 0l-.6.6c-.2.2-.2.5 0
+                  .7l7.6 7.6-7.6 7.5c-.2.2-.2.5 0 .7l.5.5c.2.2.5.2.7
+                  0l7.6-7.6 7.6 7.6c.2.2.5.2.7 0l.5-.5c.2-.2.2-.5 0-.7z"
+          />
+        </svg>
+      </button>
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="formulario.html">Contacto</a></li>
+      </ul>
+    </bento-sidebar>
+    <script>
+      (async () => {
+        const sidebar = document.querySelector('#sidebar1');
+        await customElements.whenDefined('bento-sidebar');
+        const api = await sidebar.getApi();
+        // set up button actions
+        document.querySelector('#open-sidebar').onclick = () => api.open();
+        document.querySelector('#close-sidebar').onclick = () => api.close();
+      })();
+    </script>
     <!-- Sección de consejos -->
     <section class="bg1">
       <h2>Cuidados Básicos</h2>
@@ -60,7 +128,7 @@
     </section>
     <div class="separar"></div>
     <footer id="footer" class="footer">
-      <div class="container">
+      <div class="Fcontainer">
         <div class="footer-content">
           <div class="footer-links">
             <ul>

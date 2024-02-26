@@ -6,22 +6,30 @@ body {
   font-family: "Roboto Slab", serif;
   margin: 0;
   padding: 0;
-  background-color: var(--color-secundario);
+background-image: url("../contacta.jpg");
   color: var(--color-primario);
 }
 
-header {
-  background-color: var(--color-primario);
+h2 {
+  font-size: 2rem;
+  color: var(--color-primario);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
   color: var(--color-secundario);
-  padding: 20px;
-  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 main {
+  margin-top: 80px;
+  margin-right: 200px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: end;
   min-height: 80vh;
 }
 
@@ -30,20 +38,19 @@ form {
   border: 1px solid var(--color-primario);
   padding: 20px;
   border-radius: 10px;
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 40%;
 }
 
 label {
-  display: block;
+  display: inline-block;
   margin-bottom: 8px;
+  vertical-align: top;
 }
 
 input,
 select,
 textarea {
+  display: block;
   width: 100%;
   padding: 8px;
   margin-bottom: 16px;
@@ -58,6 +65,11 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+input[type="submit"]:hover {
+  color: #002c59;
+  background-color: #ffcc00;
+}
+
 a {
   color: var(--color-primario);
   text-decoration: none;
@@ -65,6 +77,26 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: #ffcc00;
+}
+
+
+label[for="nombre"],
+label[for="apellidos"],
+label[for="email"],
+label[for="telefono"],
+label[for="ciudad"] {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+/* Style label element for the "Mensaje del usuario" textarea to be full-width */
+label[for="mensaje"] {
+  width: 100%;
+  display: block;
+  margin-bottom: 8px;
 }
 
 .footer {
