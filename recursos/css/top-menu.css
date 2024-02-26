@@ -4,6 +4,7 @@ bento-sidebar[open] {
     color: #f5f5f5;
     width: 250px;
     padding-left: 10px;
+    font-family: "Roboto Slab", serif;
   }
   
   bento-sidebar[open] ul {
@@ -38,6 +39,8 @@ bento-sidebar[open] {
   }
   /*svg*/
   #open-sidebar {
+    right: 20px;
+    top: 5px;
     z-index: 1000;
     position: fixed;
     background-color: transparent;

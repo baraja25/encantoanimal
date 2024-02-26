@@ -27,6 +27,9 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <!-- carrousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- favico -->
     <link rel="shortcut icon" href="ico/favicon.ico" type="image/x-icon">
    
@@ -87,12 +90,12 @@
         })();
       </script>
     <!-- Título -->
-    
-      
       <header id="inicio" class="parallax bg">
         <h1 class="logo">Encanto Animal</h1>
+        
       </header>
       <!-- Secciones -->
+
       <section class="no-parallax tituloSeccion">
         <div class="introduccion">
           <h2>Introducción a Encanto Animal</h2>
@@ -137,15 +140,35 @@
         </div>
       </section>
       <section id="testimonios" class="no-parallax bg2">
-        <div class="testimonial">
+        <div class="testimonial slick-slider">
           <h2>Testimonios de Nuestros Clientes</h2>
-          <p>
-            "La experiencia con Encanto Animal fue increíble. Capturaron la
-            verdadera esencia de mi mascota, y ahora tengo recuerdos que durarán
-            toda la vida."
-          </p>
-          <p>- Maria</p>
+          <div class="testimonial-item">
+            <p>
+              "La experiencia con Encanto Animal fue increíble. Capturaron la verdadera
+              esencia de mi mascota, y ahora tengo recuerdos que durarán toda la vida."
+            </p>
+            <p>- Maria</p>
+          </div>
+          <div class="testimonial-item">
+            <p>
+              "¡Encanto Animal superó mis expectativas! Su trabajo es excepcional y
+              recomiendo sus servicios a todos los amantes de las mascotas."
+            </p>
+            <p>- Juan</p>
+          </div>
+          <div class="testimonial-item">
+            <p>
+              "Mi experiencia con Encanto Animal fue maravillosa. Su enfoque amable y
+              profesional hizo que el proceso fuera agradable y sin estrés."
+            </p>
+            <p>- Ana</p>
+          </div>
+          <!-- Agrega más testimonios aquí -->
+             <script src="recursos/js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         </div>
+        
       </section>
 
       <!-- Texto, listas, hiperenlaces -->
@@ -192,5 +215,6 @@
         </div>
       </footer>
     </main>
+
   </body>
 </html>
