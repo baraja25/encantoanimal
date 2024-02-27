@@ -11,9 +11,9 @@
     background-color: var(--color-primario); /* Color de fondo */
     color: white; /* Color de texto */
     padding: 20px 0 0; /* Espaciado interno */
-    /* margin-top: 40px; */
     position: relative;
     z-index: 999;
+    font-family: "Roboto Slab", serif;
   }
   
   .footer::before {

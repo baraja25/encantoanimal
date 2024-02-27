@@ -1,82 +1,70 @@
-body {
-  background-color: #002c59; /* Fondo blanco */
-  color: #002c59; /* Color de texto principal */
-  font-family: Arial, sans-serif;
-  margin: 0;
-  font-size: 18px; /* Tamaño de letra principal */
-  line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
-}
-.titulo {
-  background-color: #fff;
-  color: #002c59;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-  text-align: center;
-  font-size: 2.5em;
-  border-radius: 8px;
-}
-.titulo::before {
-  content: "\1F43E"; /* Emoji de huella de pata (puedes cambiarlo por otro) */
-  font-size: 1.5em;
-  margin-right: 10px;
-}
-.titulo span {
-  font-weight: bold;
-  font-style: italic;
-}
-.titulo a {
-    color: #002c59;
-}
-section {
-  border-radius: 15px;
-  margin: 50px auto; /* Centrar la sección */
-  max-width: 800px; /* Ancho máximo para la sección */
-  padding: 20px;
-  position: relative;
-  box-shadow: 4px 4px 35px rgba(255, 255, 255, 0.4); /* Sombra sutil para resaltar */
-  text-shadow: 1px 1px 0px #000000;
+:root {
+  --color-primario: #002c59;
+  --color-secundario: #f5f5f5;
+  --color-titulo: #5af600;
+  --color-letra-fondoClaro: #24315e;
 }
 
-h1,
-h2 {
-  color: #fff;
-  font-size: 2em; /* Tamaño de letra más grande para títulos principales */
+
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 80px;
+  font-weight: 400;
+  color: #f8cdf8;
+  text-shadow: 3px 2px var(--color-primario)
 }
 
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
 
-a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #ffcc00;
-}
 
 /* Fondo con imagen para la primera sección */
 .bg1 {
-  background-image: url("../portada.jpg"); /* Reemplaza 'imagen1.jpg' con la ruta de tu imagen */
-  background-size: cover;
-  background-position: center;
-  color: #fff; /* Cambia el color de texto para que sea legible en la imagen */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-.bg2 {
-  background-image: url("../bosque.jpg"); /* Reemplaza 'imagen1.jpg' con la ruta de tu imagen */
-  background-size: cover;
-  background-position: center;
-  color: #fff; /* Cambia el color de texto para que sea legible en la imagen */
+
+.card {
+  width: 300px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
-.bg3 {
-  background-image: url("../naranja.jpg"); /* Reemplaza 'imagen1.jpg' con la ruta de tu imagen */
-  background-size: cover;
-  background-position: center;
-  color: #fff; /* Cambia el color de texto para que sea legible en la imagen */
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .bg1 {
+    justify-content: center;
+  }
+
+  .card {
+    width: calc(50% - 40px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: calc(100% - 40px);
+  }
 }
 .separar {
   background-color: #fff;

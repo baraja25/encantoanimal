@@ -14,19 +14,20 @@
     <script type="module" src="https://cdn.ampproject.org/v0/bento-sidebar-1.0.mjs" crossorigin="anonymous"></script>
     <script nomodule src="https://cdn.ampproject.org/v0/bento-sidebar-1.0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.ampproject.org/v0/bento-sidebar-1.0.css" crossorigin="anonymous"></link>
-    <!-- fuente importada de google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto+Slab:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-      rel="stylesheet"
-    />
+   <!-- fuente import -->
+   <link rel="stylesheet" href="https://cdn.ampproject.org/v0/bento-sidebar-1.0.css" crossorigin="anonymous"></link>
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+     href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto+Slab:wght@300;400&display=swap"
+     rel="stylesheet"
+   />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+     href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+     rel="stylesheet"
+   />
     <!-- favico -->
     <link rel="shortcut icon" href="ico/favicon.ico" type="image/x-icon">
     
@@ -70,6 +71,8 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="galeria.html">Galería</a></li>
         <li><a href="formulario.html">Contacto</a></li>
+        <li><a href="politica.html">Politica de Privacidad</a></li>
+        <li><a href="terminos.html">Terminos de uso</a></li>
       </ul>
     </bento-sidebar>
     <script>
@@ -82,58 +85,78 @@
         document.querySelector('#close-sidebar').onclick = () => api.close();
       })();
     </script>
-    <!-- Sección de consejos -->
-    <section class="bg1">
-      <h2>Cuidados Básicos</h2>
-      <p>
-        Aquí encontrarás algunos consejos esenciales para el cuidado de tus
-        mascotas:
-      </p>
-      <ul>
-        <li>Mantén una dieta balanceada y adecuada para su especie.</li>
-        <li>Asegúrate de proporcionar suficiente agua fresca diariamente.</li>
-        <li>
-          Realiza visitas regulares al veterinario para chequeos de salud.
-        </li>
-        <li>Proporciona un ambiente limpio y seguro para tu mascota.</li>
-      </ul>
-    </section>
-
-    <!-- Consejos específicos para perros -->
-    <section class="bg2">
-      <h2>Consejos para Cuidar a tu Perro</h2>
-      <p>Si tienes un perro, aquí hay algunos consejos adicionales:</p>
-      <ul>
-        <li>Pasea a tu perro regularmente para ejercicio y socialización.</li>
-        <li>Proporciónele juguetes para mantenerlo entretenido.</li>
-        <li>
-          Cepilla su pelaje según sea necesario para evitar enredos y problemas
-          de piel.
-        </li>
-      </ul>
-    </section>
-
-    <!-- Consejos específicos para gatos -->
-    <section class="bg3">
-      <h2>Consejos para Cuidar a tu Gato</h2>
-      <p>Si tienes un gato, aquí hay algunos consejos adicionales:</p>
-      <ul>
-        <li>
-          Proporciónele un rascador para mantener sus uñas saludables y evitar
-          daños en muebles.
-        </li>
-        <li>Bríndale un lugar tranquilo donde pueda descansar cómodamente.</li>
-        <li>Juega con tu gato para estimular su mente y mantenerlo activo.</li>
-      </ul>
-    </section>
+<h1 class="logo">Encanto Animal</h1>
+<div class="separar"></div>
+<p style="margin-left: 40px;">* Precios de Lunes a Viernes (Sábados, Domingos y Festivos tiene un incremento de 20 euros en todas las sesiones)</p>
+<section class="bg1">
+  
+  <div class="card">
+    <img src="recursos/sofa.jpg" alt="Foto en estudio">
+    <div class="card-content">
+      <h3>Fotos en estudio</h3>
+      <p>50€ por sesión de una hora.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="recursos/playa.jpg" alt="Sesión en exteriores">
+    <div class="card-content">
+      <h3>Sesión fotográfica en exteriores</h3>
+      <p>80€ por sesión de una hora.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="recursos/gafas.jpg" alt="Paquete especial">
+    <div class="card-content">
+      <h3>Paquete especial</h3>
+      <p>Incluye sesión en estudio y en exteriores por 120€.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="recursos/luces.jpg" alt="Sesión de fotos express">
+    <div class="card-content">
+      <h3>Sesión de fotos express (30 minutos)</h3>
+      <p>30€.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="recursos/listo.jpg" alt="Fotografía profesional de mascotas">
+    <div class="card-content">
+      <h3>Fotografía profesional de mascotas</h3>
+      <p>Varía según el servicio. Contáctanos para más información.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="recursos/grisPitbull.jpg" alt="Sesiones fotográficas personalizadas">
+    <div class="card-content">
+      <h3>Sesiones fotográficas personalizadas</h3>
+      <p>Varía según la duración y el contenido. Contáctanos para más información.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="recursos/atras.jpg" alt="Álbumes y productos personalizados">
+    <div class="card-content">
+      <h3>Álbumes y productos personalizados</h3>
+      <p>Varía según los productos seleccionados. Contáctanos para más información.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="recursos/calle.jpg" alt="Consejos y recursos para el cuidado de mascotas">
+    <div class="card-content">
+      <h3>Consejos y recursos para el cuidado de mascotas</h3>
+      <p>Consulta nuestros recursos gratuitos y consejos útiles para cuidar a tu mascota.</p>
+    </div>
+  </div>
+</section>
     <div class="separar"></div>
+
+
     <footer id="footer" class="footer">
       <div class="Fcontainer">
         <div class="footer-content">
           <div class="footer-links">
             <ul>
-              <li><a href="cuidados.html">Consejos de cuidado</a></li>
-              <li><a href="formulario.html">Subir Foto de Mascota</a></li>
+              <li><a href="cuidados.html">Tarifas</a></li>
+              <li><a href="formulario.html">Contacto</a></li>
               <li><a href="politica.html">Política de Privacidad</a></li>
               <li><a href="terminos.html">Términos y Condiciones</a></li>
             </ul>
