@@ -29,15 +29,3 @@ $(document).ready(function(){
     arrows: false // Ocultar botones de navegación
   });
 });
-
-
-// $(document).ready(function(){
-//   $('.slick-slider').slick({
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     arrows: false,
-//     fade: true,
-//     autoplay: true,
-//     autoplaySpeed: 5000, // Change the autoplay speed as desired
-//   });
-// });
