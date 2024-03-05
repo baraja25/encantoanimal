@@ -1,7 +1,6 @@
 :root {
   --color-primario: #002c59;
   --color-secundario: #f5f5f5;
-  --color-titulo: #ffedff;
   --color-letra-fondoClaro: #24315e;
 }
 
@@ -31,6 +30,20 @@ h1 {
   margin-bottom: 30px;
 }
 
+#inicio {
+  height: 100vh;
+  background-image: url("../recursos/portada.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  transition: background-image 3.5s;
+}
+
 .no-parallax {
   background-color: var(--color-secundario);
   color: var(--color-letra-fondoClaro);
@@ -48,10 +61,13 @@ h1 {
   background-size: 100%;
   z-index: -1;
 }
+
+
+/*----------*/
 .bg::after {
-  background: linear-gradient(rgba(137, 171, 227, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../portada.jpg");
+  background:url("../portada.jpg");
   background-size: cover;
+  transition: background-image 3.5s;
 }
 .bg2 {
   background:url("../floki2.jpg");
@@ -64,10 +80,11 @@ h1 {
 }
 .logo {
   font-family: "Pacifico", cursive;
-  font-size: 100px;
+  font-size: 150px;
   font-weight: 400;
-  color: var(--color-titulo);
-  text-shadow: 3px 2px #474554;
+  color: #DBECEA;
+  text-shadow: 3px 2px #000000;
+  margin-bottom: 20%;
 }
 .tituloSeccion {
   display: flex;
@@ -97,6 +114,8 @@ h1 {
   font-size: 21px;
   font-weight: 800;
   line-height: 30px;
+  overflow: auto; 
+  max-height: 400px;
 }
 .introduccionImagen {
   border-radius: 60%;
@@ -157,4 +176,46 @@ h1 {
   font-style: italic; /* Estilo itálico para el testimonio */
   font-size: 24px;
   text-shadow: 2px 1px black;
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .introduccion h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .introduccion p {
+    font-size: 18px;
+    line-height: 26px;
+    max-height: none; 
+    overflow: visible;
+  }
+  
+  .servicios h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  
+  .servicios p {
+    margin: 15px 0;
+  }
+}
+
+/* Estilos para pantallas muy pequeñas, como teléfonos */
+@media screen and (max-width: 480px) {
+  .introduccion h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .introduccion p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .servicios h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
 }
