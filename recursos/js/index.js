@@ -32,12 +32,12 @@ $(document).ready(function(){
 
 // Lista de imágenes de fondo
 const backgrounds = [
-  'url("../recursos/portada1.jpg")',
-  'url("../recursos/portada2.jpg")',
-  'url("../recursos/portada3.jpg")',
-  'url("../recursos/portada4.jpg")',
-  'url("../recursos/portada5.jpg")',
-  'url("../recursos/portada6.jpg")'
+  'url("recursos/portada1.jpg")',
+  'url("recursos/portada2.jpg")',
+  'url("recursos/portada3.jpg")',
+  'url("recursos/portada4.jpg")',
+  'url("recursos/portada5.jpg")',
+  'url("recursos/portada6.jpg")'
 ];
 
 // Función para cambiar la imagen de fondo
