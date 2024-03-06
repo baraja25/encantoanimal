@@ -31,6 +31,7 @@ main {
   flex-direction: column;
   align-items: end;
   min-height: 80vh;
+  height: 100vh;
 }
 
 form {
@@ -40,7 +41,7 @@ form {
   border-radius: 10px;
   width: 40%; 
   max-width: 600px; 
-  margin: 0 auto; 
+  margin: 20px -120px 0 0; 
 }
 label {
   display: inline-block;
@@ -81,11 +82,11 @@ a:hover {
   color: #ffcc00;
 }
 
-/* Responsive styles */
+
 @media screen and (max-width: 768px) {
   main {
-    margin-right: 0; /* Remove right margin for smaller screens */
-    align-items: center; /* Center align items for smaller screens */
+    margin-right: 0; 
+    align-items: center; 
   }
 
   form {

@@ -99,6 +99,10 @@ h1 {
   z-index: 1;
 }
 
+.introduccion {
+  min-width: 540px;
+}
+
 .introduccion h2 {
   font-size: 50px;
   margin-bottom: 60px;
