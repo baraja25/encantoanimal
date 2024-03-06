@@ -14,6 +14,7 @@
     position: relative;
     z-index: 999;
     font-family: "Roboto Slab", serif;
+    font-size: 20px;
   }
   
   .footer::before {
@@ -51,6 +52,10 @@
     flex: 1; /* Distribución proporcional */
   }
   
+  p {
+    font-size: 20px;
+  }
+
   /* Estilos para el fondo del footer */
   .footer-bottom {
     background-color: #1a2640; /* Color de fondo para el fondo del footer */
@@ -59,6 +64,7 @@
   }
   .footer-links {
     margin-left: 20px;
+    margin-top: 30px;
   }
   /* Estilos para los enlaces en el footer */
   .footer-links ul {
@@ -67,7 +73,7 @@
   }
   
   .footer-links li {
-    margin-bottom: 10px; /* Espaciado entre elementos */
+    margin-bottom: 30px; /* Espaciado entre elementos */
   }
   .footer-links a:hover {
     color: #ffcc00;

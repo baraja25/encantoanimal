@@ -38,9 +38,10 @@ form {
   border: 1px solid var(--color-primario);
   padding: 20px;
   border-radius: 10px;
-  width: 40%;
+  width: 40%; 
+  max-width: 600px; 
+  margin: 0 auto; 
 }
-
 label {
   display: inline-block;
   margin-bottom: 8px;
@@ -80,6 +81,17 @@ a:hover {
   color: #ffcc00;
 }
 
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  main {
+    margin-right: 0; /* Remove right margin for smaller screens */
+    align-items: center; /* Center align items for smaller screens */
+  }
+
+  form {
+    width: 80%; /* Adjusted width for smaller screens */
+  }
+}
 
 label[for="nombre"],
 label[for="apellidos"],
@@ -99,75 +111,7 @@ label[for="mensaje"] {
   margin-bottom: 8px;
 }
 
-.footer {
-  background-color: var(--color-primario); /* Color de fondo */
-  color: white; /* Color de texto */
-  padding: 20px 0 0; /* Espaciado interno */
-  /* margin-top: 40px; */
-  position: relative;
-  z-index: 999;
-}
 
-/* Estilos para los enlaces dentro del footer */
-.footer a {
-  color: white; /* Color de enlaces */
-  text-decoration: none; /* Quitar subrayado */
-}
-
-/* Estilos para el contenido del footer */
-.footer-content {
-  display: flex; /* Display en línea */
-  justify-content: space-between; /* Distribución espaciada entre elementos */
-}
-.container {
-  margin-top: 20px;
-}
-/* Estilos para la sección de contactos y enlaces */
-.footer-contact,
-.footer-links {
-  flex: 1; /* Distribución proporcional */
-}
-
-/* Estilos para el fondo del footer */
-.footer-bottom {
-  background-color: #1a2640; /* Color de fondo para el fondo del footer */
-  text-align: center; /* Alineación centrada */
-  padding: 10px 0; /* Espaciado interno */
-}
-.footer-links {
-  margin-left: 20px;
-}
-/* Estilos para los enlaces en el footer */
-.footer-links ul {
-  list-style-type: none; /* Quitar viñetas */
-  padding: 0;
-}
-
-.footer-links li {
-  margin-bottom: 10px; /* Espaciado entre elementos */
-}
-.footer-links a:hover {
-  color: #ffcc00;
-}
-.footer-social {
-  margin-left: 20px;
-  margin-top: 15px;
-}
-/* Estilos para la sección de redes sociales */
-.footer-social ul {
-  list-style-type: none; /* Quitar viñetas */
-  padding: 0; /* Quitar espaciado */
-  display: flex; /* Display en línea */
-  justify-content: center; /* Alineación centrada */
-  margin: 10px 0;
-}
-
-.footer-social li {
-  margin: 0 10px; /* Espaciado entre elementos */
-}
-.footer-social a:hover {
-  color: #ffcc00;
-}
 /*Estilos para el boton volver*/
 .volver {
   display: flex;

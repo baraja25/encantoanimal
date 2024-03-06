@@ -32,7 +32,7 @@ h1 {
 
 #inicio {
   height: 100vh;
-  background-image: url("../recursos/portada.jpg");
+  background-image: url("../portada.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -62,13 +62,6 @@ h1 {
   z-index: -1;
 }
 
-
-/*----------*/
-.bg::after {
-  background:url("../portada.jpg");
-  background-size: cover;
-  transition: background-image 3.5s;
-}
 .bg2 {
   background:url("../floki2.jpg");
   background-size: cover;
@@ -78,6 +71,7 @@ h1 {
     url("../conejo.jpg");
   background-size: cover;
 }
+
 .logo {
   font-family: "Pacifico", cursive;
   font-size: 150px;

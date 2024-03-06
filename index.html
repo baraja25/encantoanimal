@@ -33,7 +33,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- javascript -->
     <script src="recursos/js/index.js"></script>
+    <script src="recursos/js/menu.js"></script>
     <!-- favico -->
     <link rel="shortcut icon" href="ico/favicon.ico" type="image/x-icon">
    
@@ -52,6 +54,16 @@
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
         </svg>
       </button>
+      <!-- Menú principal -->
+      <nav id="main-menu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="cuidados.html">Tarifas</a></li>
+          <li><a href="formulario.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <!-- bento sidebar -->
       <bento-sidebar id="sidebar1" side="left" hidden>
         <button id="close-sidebar">
           <svg
@@ -93,7 +105,7 @@
         })();
       </script>
     <!-- Título -->
-      <header id="inicio">
+      <header id="inicio" class="bg4">
           <h1 class="logo">Encanto Animal</h1>
       </header>
       <!-- Secciones -->
@@ -198,8 +210,6 @@
           <div class="footer-content">
             <div class="footer-links">
               <ul>
-                <li><a href="cuidados.html">Tarifas</a></li>
-                <li><a href="formulario.html">Contacto</a></li>
                 <li><a href="politica.html">Política de Privacidad</a></li>
                 <li><a href="terminos.html">Términos y Condiciones</a></li>
               </ul>

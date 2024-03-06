@@ -24,9 +24,12 @@
       rel="stylesheet"
     />
     <!-- css -->
-    <link rel="stylesheet" href="recursos/css/top-menu.css">
     <link rel="stylesheet" href="recursos/css/reset.css" />
+    <link rel="stylesheet" href="recursos/css/top-menu.css">
     <link rel="stylesheet" href="recursos/css/formulario.css" />
+    <link rel="stylesheet" href="recursos/css/footer.css">
+    <!-- javascript -->
+    <script src="recursos/js/menu.js"></script>
     <!-- favico -->
     <link rel="shortcut icon" href="ico/favicon.ico" type="image/x-icon">
     <title>Formulario de Sesion</title>
@@ -44,6 +47,16 @@
         <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
       </svg>
     </button>
+    <!-- Menú principal -->
+    <nav id="main-menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="cuidados.html">Tarifas</a></li>
+        <li><a href="formulario.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <!-- bento-sidebar -->
     <bento-sidebar id="sidebar1" side="left" hidden>
       <button id="close-sidebar">
         <svg
@@ -156,8 +169,6 @@
         <div class="footer-content">
           <div class="footer-links">
             <ul>
-              <li><a href="cuidados.html">Tarifas</a></li>
-              <li><a href="formulario.html">Contacto</a></li>
               <li><a href="politica.html">Política de Privacidad</a></li>
               <li><a href="terminos.html">Términos y Condiciones</a></li>
             </ul>
